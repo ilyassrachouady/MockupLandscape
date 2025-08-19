@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
       
       {/* Content */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <div className="hero-content flex flex-col items-center justify-center min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh]">
+        <div className="hero-content flex flex-col items-center justify-center min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh] pt-16 sm:pt-0">
           <h1 className="hero-headline text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-6 sm:mb-8 md:mb-10 lg:mb-12 leading-tight text-center max-w-3xl mx-auto">
             Expert Septic & Earthworks<br />
             <span className="text-green-400">Solutions in Kenora, ON</span>
