@@ -1,3 +1,233 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom responsive styles */
+@layer base {
+  html {
+    overflow-x: hidden;
+  }
+  
+  body {
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+}
+
+@layer components {
+  /* Ensure images are responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Prevent text overflow on mobile */
+  .text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Mobile-first button sizing */
+  .btn-mobile {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Responsive container */
+  .container-responsive {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .container-responsive {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container-responsive {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  /* Hero section specific styles */
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .hero-headline {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.1;
+  }
+  
+  .hero-subheadline {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+  }
+  
+  /* Ensure perfect centering on mobile */
+  @media (max-width: 640px) {
+    .hero-content {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .hero-headline {
+      font-size: clamp(1.5rem, 8vw, 2.5rem);
+      margin-bottom: 1.5rem;
+    }
+    
+    .hero-subheadline {
+      font-size: clamp(1rem, 4vw, 1.25rem);
+      margin-bottom: 2rem;
+    }
+    
+    .hero-cta {
+      margin-bottom: 2rem;
+    }
+    
+    .hero-trust {
+      margin-top: 2rem;
+    }
+  }
+  
+  /* Tablet optimization */
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .hero-headline {
+      font-size: clamp(2rem, 6vw, 3rem);
+    }
+    
+    .hero-subheadline {
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
+    }
+  }
+  
+  /* Desktop - keep exactly as is */
+  @media (min-width: 1024px) {
+    .hero-content {
+      /* Preserve existing desktop layout */
+    }
+  }
+}
+
+@layer utilities {
+  /* Mobile-specific utilities */
+  .mobile-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .mobile-margin {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+  /* Prevent horizontal scroll */
+  .no-horizontal-scroll {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
+  /* Responsive text sizing */
+  .text-responsive-xs {
+    font-size: 0.75rem;
+  }
+  
+  .text-responsive-sm {
+    font-size: 0.875rem;
+  }
+  
+  .text-responsive-base {
+    font-size: 1rem;
+  }
+  
+  .text-responsive-lg {
+    font-size: 1.125rem;
+  }
+  
+  .text-responsive-xl {
+    font-size: 1.25rem;
+  }
+  
+  @media (min-width: 640px) {
+    .text-responsive-xs {
+      font-size: 0.75rem;
+    }
+    
+    .text-responsive-sm {
+      font-size: 0.875rem;
+    }
+    
+    .text-responsive-base {
+      font-size: 1rem;
+    }
+    
+    .text-responsive-lg {
+      font-size: 1.125rem;
+    }
+    
+    .text-responsive-xl {
+      font-size: 1.25rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .text-responsive-xs {
+      font-size: 0.75rem;
+    }
+    
+    .text-responsive-sm {
+      font-size: 0.875rem;
+    }
+    
+    .text-responsive-base {
+      font-size: 1rem;
+    }
+    
+    .text-responsive-lg {
+      font-size: 1.125rem;
+    }
+    
+    .text-responsive-xl {
+      font-size: 1.25rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .text-responsive-xs {
+      font-size: 0.75rem;
+    }
+    
+    .text-responsive-sm {
+      font-size: 0.875rem;
+    }
+    
+    .text-responsive-base {
+      font-size: 1rem;
+    }
+    
+    .text-responsive-lg {
+      font-size: 1.125rem;
+    }
+    
+    .text-responsive-xl {
+      font-size: 1.25rem;
+    }
+  }
+}

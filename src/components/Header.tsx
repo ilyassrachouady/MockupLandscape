@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ mobileMenuOpen, setMobileMenuOpen }) =>
             {/* Logo */}
             <div className="flex items-center">
               <img 
-                src="https://static.wixstatic.com/media/d5a954_f2db906e57ad4b388d20498e391a3506~mv2.png"
+                src="/Proof 1 - Sunrise Earthworks Logo new_1_.avif"
                 alt="Sunrise Earthworks Logo"
                 className="h-12 w-auto mr-3"
               />
